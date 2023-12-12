@@ -1,11 +1,11 @@
 pipeline {
-    agent {  label "master"    }
+    agent {  label "linuxbuildnode"    }
     
     stages {
         // Step 1
         stage('SCM') {
                 steps {
-                    git 'https://github.com/webdevprashant/jenkins-training-CI-CD-Day6.git'
+                    git 'https://github.com/KandasamyMurugan/jenkins-training-CI-CD-Day6.git'
                 }        
         }
         // Step 2
