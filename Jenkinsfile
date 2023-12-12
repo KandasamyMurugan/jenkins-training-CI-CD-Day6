@@ -5,7 +5,7 @@ pipeline {
         // Step 1
         stage('SCM') {
                 steps {
-                    git 'https://github.com/KandasamyMurugan/jenkins-training-CI-CD-Day6.git'
+                    git branch: 'master', credentialsId: 'GITHUB_PASSWORD', url: 'git@github.com:KandasamyMurugan/jenkins-training-CI-CD-Day6.git'
                 }        
         }
         // Step 2
