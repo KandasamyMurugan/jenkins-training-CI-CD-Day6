@@ -1,4 +1,5 @@
 pipeline {     
+    agent {  label "linuxbuildnode"    }
     stages {
         // Step 1
         stage('SCM') {
