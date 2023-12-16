@@ -128,7 +128,7 @@
                                <version>3.9.6</version>
 			       <configuration>
                                      <failOnMissingWebXml>false</failOnMissingWebXml>
-                               </configuration
+                               </configuration>
                         </plugin>
 		</plugins>
 	</build>
