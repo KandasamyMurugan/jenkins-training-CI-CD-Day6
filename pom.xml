@@ -118,14 +118,17 @@
 				<version>3.9.6</version>
 				<inherited>true</inherited>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>18</source>
+					<target>188</target>
 				</configuration>
 			</plugin>
 			<plugin>
                                <groupId>org.apache.maven.plugins</groupId>
                                <artifactId>maven-war-plugin</artifactId>
                                <version>3.9.6</version>
+				<configuration>
+                                     <failOnMissingWebXml>false</failOnMissingWebXml>
+                                </configuration
                         </plugin>
 		</plugins>
 	</build>
