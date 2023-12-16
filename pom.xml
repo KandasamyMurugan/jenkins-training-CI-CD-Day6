@@ -126,9 +126,9 @@
                                <groupId>org.apache.maven.plugins</groupId>
                                <artifactId>maven-war-plugin</artifactId>
                                <version>3.9.6</version>
-				<configuration>
+			       <configuration>
                                      <failOnMissingWebXml>false</failOnMissingWebXml>
-                                </configuration
+                               </configuration
                         </plugin>
 		</plugins>
 	</build>
