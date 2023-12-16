@@ -91,17 +91,15 @@
 		
 		<!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
 		<dependency>
-		    <groupId>ch.qos.logback</groupId>
-		    <artifactId>logback-classic</artifactId>
-		    <version>3.2.5</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-                <dependency>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-dependency-plugin</artifactId>
-                    <version>3.9.6</version>
-		    <type>maven-plugin</type>
+                  <groupId>org.apache.maven</groupId>
+                  <artifactId>maven-artifact</artifactId>
+                  <version>${mavenVersion}</version>
                 </dependency>
+                <dependency>
+                  <groupId>org.apache.maven</groupId>
+                  <artifactId>maven-core</artifactId>
+                  <version>${mavenVersion}</version>
+                 </dependency>
 		
   	</dependencies>
 	
