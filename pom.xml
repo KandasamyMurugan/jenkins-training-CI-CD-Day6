@@ -95,8 +95,14 @@
 		    <artifactId>logback-classic</artifactId>
 		    <version>3.9.6</version>
 		</dependency>
-
-	</dependencies>
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+                <dependency>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.9.0</version>
+                </dependency>
+		
+  	</dependencies>
 	
 	<!-- <distributionManagement>
 	    <repository>
