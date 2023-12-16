@@ -125,8 +125,8 @@
 				<version>3.9.6</version>
 				<inherited>true</inherited>
 				<configuration>
-					<source>18</source>
-					<target>18</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 		</plugins>
