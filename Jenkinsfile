@@ -17,7 +17,7 @@ pipeline {
         // Step 3
         stage('Build docker image') {
                 steps {
-                    sh "sudo docker build -t webdevprashant/javaapp-day6:${BUILD_NUMBER} ."
+                    sh "sudo docker build -t kmurugandocker/javaapp-day6:${BUILD_NUMBER} ."
                 }
         }
         
