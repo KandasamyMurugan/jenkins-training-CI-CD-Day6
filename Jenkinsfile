@@ -1,5 +1,8 @@
 pipeline {     
     agent {  label "linuxbuildnode"    }
+    environment {
+        DOCKERHUB_CREDENTIALS=credentials('Docker_hub_password')
+    }
     stages {
         // Step 1
         stage('SCM') {
@@ -24,10 +27,9 @@ pipeline {
         // Step 4
         stage('Push docker image') {
                 steps {
-                    withCredentials([string(credentialsId: 'Docker_hub_password')]) {
-                    sh "sudo docker login -u kmurugandocker -p $Docker_hub_password"
+                    sh "echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKER_CREDENTIALS_USR --password-stdin' echo docker login -u kmurugandocker -p $Docker_hub_password"
                     }
-                    sh "sudo docker image push kmurugandocker/javaapp-day6:${BUILD_NUMBER}"
+                    sh "sudo docker push kmurugandocker/javaapp-day6:${BUILD_NUMBER}"
                 }
         }
         
