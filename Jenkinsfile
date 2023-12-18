@@ -27,7 +27,7 @@ pipeline {
                     withCredentials([string(credentialsId: 'Docker_hub_password')]) {
                     sh "sudo docker login -u kmurugandocker -p $Docker_hub_password"
                     }
-                    sh "sudo docker push kmurugandocker/javaapp-day6:${BUILD_NUMBER}"
+                    sh "sudo docker image push kmurugandocker/javaapp-day6:${BUILD_NUMBER}"
                 }
         }
         
