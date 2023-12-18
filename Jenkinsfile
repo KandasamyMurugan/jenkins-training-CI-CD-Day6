@@ -24,8 +24,8 @@ pipeline {
         // Step 4
         stage('Push docker image') {
                 steps {
-                    withCredentials([string(credentialsId: 'Docker_hub_password', variable: 'DOCKER_PASSWORD')]) {
-                    sh "sudo docker login -u kmurugandocker -p $DOCKER_PASSWORD"
+                    withCredentials([string(credentialsId: 'Docker_hub_password')]) {
+                    sh "sudo docker login -u kmurugandocker -p $Docker_hub_password"
                     }
                     sh "sudo docker push kmurugandocker/javaapp-day6:${BUILD_NUMBER}"
                 }
@@ -35,7 +35,7 @@ pipeline {
         stage('Deploy Java App in  Dev Env') {
                 steps {
                         sh "sudo docker rm -f myjavaappdevenv"
-                        sh "sudo docker run  -d -p 1222:8080 --name myjavaappdevenv webdevprashant/javaapp-day6:${BUILD_NUMBER}"
+                        sh "sudo docker run  -d -p 1222:8080 --name myjavaappdevenv kmurugandocker/javaapp-day6:${BUILD_NUMBER}"
                 }
         }
         
