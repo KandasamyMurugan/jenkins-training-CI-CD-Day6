@@ -27,7 +27,7 @@ pipeline {
         // Step 4
         stage('Push docker image') {
                 steps {
-                    sh "echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKER_CREDENTIALS_USR --password-stdin' echo docker login -u kmurugandocker -p $Docker_hub_password"
+                    sh "docker login -u kmurugandocker -p $Docker_hub_password"
                     sh "sudo docker push kmurugandocker/javaapp-day6:${BUILD_NUMBER}"
                 }
         }
