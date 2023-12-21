@@ -27,8 +27,7 @@ pipeline {
         // Step 4
         stage('Docker login') {
                 steps {
-                    sh 'sudo usermod -aG docker ${USER}
-                    
+                                    
                     sh 'echo $$DOCKERHUB_CREDENTIALS | docker login -u kmurugandocker --password-stdin'
                 }
         }
