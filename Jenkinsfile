@@ -28,7 +28,7 @@ pipeline {
         stage('Docker login') {
                 steps {
                                     
-                    sh 'echo $$DOCKERHUB_CREDENTIALS | docker login -u kmurugandocker --password-stdin'
+                    sh 'echo $$Docker_hub_password | docker login -u kmurugandocker --password-stdin'
                 }
         }
         // Step 5
