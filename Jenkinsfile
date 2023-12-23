@@ -20,7 +20,7 @@ pipeline {
         // Step 3
         stage('Build docker image') {
                 steps {
-                    sh "sudo docker build -t kmurugandocker/javaapp-day6:${BUILD_NUMBER} ."
+                    sh "sudo docker build -t kmurugandocker/javaapp-day6:latest ."
                 }
         }
         
@@ -28,7 +28,7 @@ pipeline {
         stage('Docker login') {
                 steps {
                                     
-                    sh 'echo $$DOCKERHUB_CREDENTIALS | docker login -u kmurugandocker --password-stdin'
+                    sh 'echo $DOCKERHUB_CREDENTIALS | docker login -u kmurugandocker --password-stdin'
                 }
         }
         // Step 5
