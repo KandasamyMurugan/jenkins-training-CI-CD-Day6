@@ -35,7 +35,7 @@ pipeline {
         // Step 5 
         stage('Deploy Java App in  Dev Env') {
                 steps {
-                        //sh "sudo docker rm -f myjavaappdevenv"
+                        sh "sudo docker rm -f myjavaappdevenv"
                         sh "sudo docker run  -d -p 1222:8080 --name myjavaappdevenv kmurugandocker/javaapp-day6:${BUILD_NUMBER}"
                 }
         }
